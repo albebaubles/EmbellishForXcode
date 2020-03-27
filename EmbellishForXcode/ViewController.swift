@@ -13,8 +13,12 @@ class ViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		// Do any additional setup after loading the view.
-	}
+				let filePath = Bundle.main.path(forResource: "Embellish", ofType: "scpt")
+//		FileManager().copyItem(at: <#T##URL#>, to: <#T##URL#>)
+//		guard let script = try? NSUserAppleScriptTask(url: URL(fileURLWithPath:  "/Users/acorbett/Library/Application Scripts/com.albebaubles.EmbellishForXcode.Embellish/Embellish.scpt")) else {
+//			return
+//		}
+}
 
 	override var representedObject: Any? {
 		didSet {
