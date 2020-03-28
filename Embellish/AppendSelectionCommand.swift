@@ -17,8 +17,9 @@ class AppendSelectionCommand: NSObject, XCSourceEditorCommand {
 
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
 
-		//		let filePath = Bundle.main.path(forResource: "Embellish", ofType: "scpt")
-		guard let script = try? NSUserAppleScriptTask(url: URL(fileURLWithPath:  "/Users/acorbett/Library/Application Scripts/com.albebaubles.EmbellishForXcode.Embellish/Embellish.scpt")) else {
+		let homeDirPath = FileManager().urls(for: .applicationScriptsDirectory, in: .userDomainMask).first!.absoluteString + "/com.albebaubles.EmbellishForXcode.Embellish/Embellish.scpt"
+
+		guard let script = try? NSUserAppleScriptTask(url: URL(fileURLWithPath: homeDirPath)) else {
 			return
 		}
 
@@ -35,7 +36,7 @@ class AppendSelectionCommand: NSObject, XCSourceEditorCommand {
 						return
 				}
 
-				for index in first.start.line...last.end.line {
+				for index in first.start.line...last.end.line - 1 {
 					guard let line = invocation.buffer.lines[index] as? String else {
 						print("Embellish: the line does not contain a string value")
 						AudioServicesPlaySystemSound(1519)
@@ -43,6 +44,7 @@ class AppendSelectionCommand: NSObject, XCSourceEditorCommand {
 					}
 					invocation.buffer.lines[index] = line.trim() + String(describing: prependText) 
 				}
+
 				completionHandler(nil)
 			}
 		})

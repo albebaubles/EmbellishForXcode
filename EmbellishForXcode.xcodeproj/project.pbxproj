@@ -13,7 +13,6 @@
 		B4E2103E242D670100732D7E /* AppendSelectionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E2103D242D670100732D7E /* AppendSelectionCommand.swift */; };
 		B4E2103F242D676900732D7E /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4F2511B242AA2B300C92183 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511A242AA2B300C92183 /* README.md */; };
-		B4F2511D242AAC6B00C92183 /* ScriptRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2511C242AAC6B00C92183 /* ScriptRunner.swift */; };
 		B4F2511F242AAD2500C92183 /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4F99D6F2410291800307B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D6E2410291800307B5F /* AppDelegate.swift */; };
 		B4F99D712410291800307B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D702410291800307B5F /* ViewController.swift */; };
@@ -65,7 +64,6 @@
 		B4ABF7F1242BF2F500C48B26 /* PrependSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrependSelectionCommand.swift; sourceTree = "<group>"; };
 		B4E2103D242D670100732D7E /* AppendSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendSelectionCommand.swift; sourceTree = "<group>"; };
 		B4F2511A242AA2B300C92183 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B4F2511C242AAC6B00C92183 /* ScriptRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptRunner.swift; sourceTree = "<group>"; };
 		B4F2511E242AAD2500C92183 /* Embellish.scpt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Embellish.scpt; sourceTree = "<group>"; };
 		B4F99D6B2410291800307B5F /* EmbellishForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbellishForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F99D6E2410291800307B5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,18 +161,17 @@
 		B4F99D862410292600307B5F /* Embellish */ = {
 			isa = PBXGroup;
 			children = (
-				B4F99D8C2410292700307B5F /* Embellish.entitlements */,
-				B4F99D8B2410292700307B5F /* Info.plist */,
 				B425E030242A5FD900E0F5B1 /* AppendCommand.swift */,
 				B4E2103D242D670100732D7E /* AppendSelectionCommand.swift */,
+				B4F99D8C2410292700307B5F /* Embellish.entitlements */,
 				B4F99D9424102D6700307B5F /* FormatCommand.swift */,
+				B4F99D8B2410292700307B5F /* Info.plist */,
+				B4F99DAA24102EC600307B5F /* parsingFromSwimat */,
 				B425E032242A5FE500E0F5B1 /* PrependCommand.swift */,
 				B4ABF7F1242BF2F500C48B26 /* PrependSelectionCommand.swift */,
-				B4F2511C242AAC6B00C92183 /* ScriptRunner.swift */,
+				B4ABF7F3242BF79100C48B26 /* Scripts */,
 				B4F99D892410292700307B5F /* SortCommand.swift */,
 				B4F99D872410292700307B5F /* SourceEditorExtension.swift */,
-				B4F99DAA24102EC600307B5F /* parsingFromSwimat */,
-				B4ABF7F3242BF79100C48B26 /* Scripts */,
 			);
 			path = Embellish;
 			sourceTree = "<group>";
@@ -321,7 +318,6 @@
 				B4F99D9C24102EA900307B5F /* ExtensionString.swift in Sources */,
 				B4ABF7F2242BF2F500C48B26 /* PrependSelectionCommand.swift in Sources */,
 				B425E031242A5FD900E0F5B1 /* AppendCommand.swift in Sources */,
-				B4F2511D242AAC6B00C92183 /* ScriptRunner.swift in Sources */,
 				B4F99D9D24102EA900307B5F /* ExtensionChar.swift in Sources */,
 				B4F99D8A2410292700307B5F /* SortCommand.swift in Sources */,
 			);
