@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B425E031242A5FD900E0F5B1 /* AppendCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E030242A5FD900E0F5B1 /* AppendCommand.swift */; };
 		B425E033242A5FE500E0F5B1 /* PrependCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E032242A5FE500E0F5B1 /* PrependCommand.swift */; };
+		B42D8479242FD36400830F1D /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B42D8478242FD36400830F1D /* iTunesArtwork.png */; };
 		B4ABF7F2242BF2F500C48B26 /* PrependSelectionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ABF7F1242BF2F500C48B26 /* PrependSelectionCommand.swift */; };
 		B4E2103E242D670100732D7E /* AppendSelectionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E2103D242D670100732D7E /* AppendSelectionCommand.swift */; };
 		B4E2103F242D676900732D7E /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		B425E030242A5FD900E0F5B1 /* AppendCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendCommand.swift; sourceTree = "<group>"; };
 		B425E032242A5FE500E0F5B1 /* PrependCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrependCommand.swift; sourceTree = "<group>"; };
+		B42D8478242FD36400830F1D /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = EmbellishForXcode/Assets.xcassets/logo.imageset/iTunesArtwork.png; sourceTree = "<group>"; };
 		B4ABF7F1242BF2F500C48B26 /* PrependSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrependSelectionCommand.swift; sourceTree = "<group>"; };
 		B4E2103D242D670100732D7E /* AppendSelectionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendSelectionCommand.swift; sourceTree = "<group>"; };
 		B4F2511A242AA2B300C92183 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		B4F99D622410291800307B5F = {
 			isa = PBXGroup;
 			children = (
+				B42D8478242FD36400830F1D /* iTunesArtwork.png */,
 				B4F2511A242AA2B300C92183 /* README.md */,
 				B4F99D6D2410291800307B5F /* EmbellishForXcode */,
 				B4F99D862410292600307B5F /* Embellish */,
@@ -276,6 +279,7 @@
 				B4F2511B242AA2B300C92183 /* README.md in Resources */,
 				B4F99D732410291900307B5F /* Assets.xcassets in Resources */,
 				B4F99D762410291900307B5F /* Main.storyboard in Resources */,
+				B42D8479242FD36400830F1D /* iTunesArtwork.png in Resources */,
 				B4E2103F242D676900732D7E /* Embellish.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
