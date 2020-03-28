@@ -6,12 +6,11 @@
 //  Copyright © 2020 Albebaubles LLC. All rights reserved.
 //
 
-
 import AppKit
-import Foundation
-import XcodeKit
 import AudioToolbox
 import Carbon
+import Foundation
+import XcodeKit
 
 class PrependSelectionCommand: NSObject, XCSourceEditorCommand {
 
