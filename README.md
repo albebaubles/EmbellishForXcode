@@ -1,7 +1,7 @@
 
 EmbellishForXcde
 ==
-![](.iTunesArtwork.png)
+![](iTunesArtwork.png)
 
 ## Description
 - Xcode source editor extension to assist with common editor needs
