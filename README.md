@@ -1,6 +1,6 @@
 
 # EmbellishForXcode
-==
+
 ![](./iTunesArtwork.png)
 
 ## Description
