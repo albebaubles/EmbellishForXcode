@@ -1,12 +1,11 @@
 
-EmbellishForXcde
+EmbellishForXcode
 ==
 ![](./iTunesArtwork.png)
 
 ## Description
 - Xcode source editor extension to assist with common editor needs
 
----
 
 ## Features
 
@@ -22,4 +21,9 @@ EmbellishForXcde
 - Sort (asc & desc)  - Sort the selected lines
 
 - Format Swift  -- This is a direct copy from https://github.com/Jintin/Swimat
+
+
+## License
+
+The module is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
