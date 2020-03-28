@@ -18,7 +18,7 @@ class SortCommand: NSObject, XCSourceEditorCommand {
 			let last = invocation.buffer.selections.lastObject as? XCSourceTextRange else { return }
 		guard first.start.line < last.end.line else { return }
 
-		sort(invocation.buffer.lines, in: first.start.line...last.end.line, by: isLessWhenTrimmed)
+		sort(invocation.buffer.lines, in: first.start.line...last.end.line - 1, by: isLessWhenTrimmed)
 	}
 
 	func sort(_ input: NSMutableArray, in range: CountableClosedRange<Int>, by comparator: (String, String) -> Bool) {
