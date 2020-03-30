@@ -1,6 +1,6 @@
 import Foundation
 
-extension SwiftParser {
+extension SwimAtSwiftParser {
 
     func isNext(char: Character, skipBlank: Bool = false) -> Bool {
         var next = string.index(after: strIndex)

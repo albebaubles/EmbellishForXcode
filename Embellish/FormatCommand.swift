@@ -5,11 +5,14 @@
 //  Created by Al Corbett on 3/4/20.
 //  Copyright © 2020 Albebaubles LLC. All rights reserved.
 //
+//
+// Special thanks to the folks to https://github.com/Jintin
+// for the SwimAt is copied directly from them
 
 import Foundation
 import XcodeKit
 
-class FormatCommand:  NSObject, XCSourceEditorCommand {
+class FormatCommand: NSObject, XCSourceEditorCommand {
 
 	let supportUTIs = [
 		"com.apple.dt.playground",
@@ -18,7 +21,7 @@ class FormatCommand:  NSObject, XCSourceEditorCommand {
 	]
 
 	func perform(with invocation: XCSourceEditorCommandInvocation,
-							 completionHandler: @escaping (Error?) -> Void) {
+		completionHandler: @escaping (Error?) -> Void) {
 
 		let uti = invocation.buffer.contentUTI
 
@@ -33,27 +36,26 @@ class FormatCommand:  NSObject, XCSourceEditorCommand {
 			Indent.char = String(repeating: " ", count: invocation.buffer.indentationWidth)
 		}
 
-		let parser = SwiftParser(string: invocation.buffer.completeBuffer)
+		let parser = SwimAtSwiftParser(string: invocation.buffer.completeBuffer)
 		do {
 			let lines = invocation.buffer.lines
 			let newLines = try parser.format().components(separatedBy: "\n")
 			let selections = invocation.buffer.selections
 			var hasSelection = false
 
-			for i in 0 ..< selections.count {
-				if let selection = selections[i] as? XCSourceTextRange, selection.start != selection.end {
+			for outerLineCount in 0 ..< selections.count {
+				if let selection = selections[outerLineCount] as? XCSourceTextRange, selection.start != selection.end {
 					hasSelection = true
-					for j in selection.start.line...selection.end.line {
-						updateLine(lines: lines, newLines: newLines, index: j)
+					for innerLineCount in selection.start.line...selection.end.line {
+						updateLine(lines: lines, newLines: newLines, index: innerLineCount)
 					}
 				}
 			}
 			if !hasSelection {
-				for i in 0 ..< lines.count {
-					updateLine(lines: lines, newLines: newLines, index: i)
+				for outerLineCount in 0 ..< lines.count {
+					updateLine(lines: lines, newLines: newLines, index: outerLineCount)
 				}
 			}
-
 			completionHandler(nil)
 		} catch {
 			completionHandler(error as NSError)
@@ -75,9 +77,8 @@ class FormatCommand:  NSObject, XCSourceEditorCommand {
 }
 
 extension XCSourceTextPosition: Equatable {
-
-	public static func == (lhs: XCSourceTextPosition, rhs: XCSourceTextPosition) -> Bool {
-		return lhs.column == rhs.column && lhs.line == rhs.line
+	public static func == (left: XCSourceTextPosition, right: XCSourceTextPosition) -> Bool {
+		return left.column == right.column && left.line == right.line
 	}
 
 }

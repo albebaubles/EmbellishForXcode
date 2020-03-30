@@ -43,7 +43,7 @@ extension String {
         }
         // MARK: no need to new obj
         if reFormat {
-            let obj = try SwiftParser(string: result).format()
+            let obj = try SwimAtSwiftParser(string: result).format()
             return (obj, target)
         } else {
             return (result, target)

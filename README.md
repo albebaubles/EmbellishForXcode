@@ -1,6 +1,6 @@
 
 # EmbellishForXcode
-
+ 
 ![](./iTunesArtwork.png)
 
 ## Description
@@ -31,11 +31,12 @@ Sort the selected lines
 
 
 ### Format Swift
-This is a direct copy from https://github.com/Jintin/Swimat
+This is a direct copy from [https://github.com/Jintin/Swimat](https://github.com/Jintin/Swimat) - you don't mess with perfection!
 
-
+### UP NEXT
+Need to add support to delete text and/or replace from the selected number of lines.
 
 ## License
 
-The module is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The project is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
