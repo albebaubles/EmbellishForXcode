@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B425E031242A5FD900E0F5B1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E030242A5FD900E0F5B1 /* Commands.swift */; };
-		B461528D246C79220056D95D /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B461528C246C79220056D95D /* iTunesArtwork.png */; };
-		B461528E246C79560056D95D /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B461528C246C79220056D95D /* iTunesArtwork.png */; };
+		B4BBA1B4246CA7D300DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B3246CA7D300DB241B /* iTunesArtwork.png */; };
+		B4BBA1B5246CA7E600DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B3246CA7D300DB241B /* iTunesArtwork.png */; };
 		B4BBDEBA2462061E000FCB90 /* XCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953965E46242521E59A23966 /* XCSourceEditorCommand.swift */; };
 		B4E2103F242D676900732D7E /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4F2511B242AA2B300C92183 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511A242AA2B300C92183 /* README.md */; };
@@ -60,7 +60,7 @@
 /* Begin PBXFileReference section */
 		953965E46242521E59A23966 /* XCSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSourceEditorCommand.swift; sourceTree = "<group>"; };
 		B425E030242A5FD900E0F5B1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
-		B461528C246C79220056D95D /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		B4BBA1B3246CA7D300DB241B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		B4F2511A242AA2B300C92183 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B4F2511E242AAD2500C92183 /* Embellish.scpt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Embellish.scpt; sourceTree = "<group>"; };
 		B4F99D6B2410291800307B5F /* EmbellishForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbellishForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,8 +126,8 @@
 		B4F99D622410291800307B5F = {
 			isa = PBXGroup;
 			children = (
-				B461528C246C79220056D95D /* iTunesArtwork.png */,
 				B4F2511A242AA2B300C92183 /* README.md */,
+				B4BBA1B3246CA7D300DB241B /* iTunesArtwork.png */,
 				B4F99D6D2410291800307B5F /* EmbellishForXcode */,
 				B4F99D862410292600307B5F /* Embellish */,
 				B4F99D832410292600307B5F /* Frameworks */,
@@ -277,9 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F2511B242AA2B300C92183 /* README.md in Resources */,
+				B4BBA1B4246CA7D300DB241B /* iTunesArtwork.png in Resources */,
 				B4F99D732410291900307B5F /* Assets.xcassets in Resources */,
 				B4F99D762410291900307B5F /* Main.storyboard in Resources */,
-				B461528D246C79220056D95D /* iTunesArtwork.png in Resources */,
 				B4E2103F242D676900732D7E /* Embellish.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B461528E246C79560056D95D /* iTunesArtwork.png in Resources */,
+				B4BBA1B5246CA7E600DB241B /* iTunesArtwork.png in Resources */,
 				B4F2511F242AAD2500C92183 /* Embellish.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
