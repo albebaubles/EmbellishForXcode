@@ -22,7 +22,9 @@ extension XCSourceEditorCommand {
 		return script
 	}
 
-	func performEmbellishOperation(invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void, operation: EmbellishOperation, scripted: Bool) {
+	func performEmbellishOperation(invocation: XCSourceEditorCommandInvocation,
+																 completionHandler: @escaping (Error?) -> Void,
+																 operation: EmbellishOperation, scripted: Bool) {
 		if scripted {
 			script()?.execute(completionHandler: { error in
 				if let error = error {
@@ -49,8 +51,13 @@ extension XCSourceEditorCommand {
 							invocation.buffer.lines[index] = line.trim() + String(describing: newText)
 						case .Prepend:
 							invocation.buffer.lines[index] = String(describing: newText) + line.trim()
-						case .Sort:
-							self.sort(invocation.buffer.lines, in: first.start.line...last.end.line - 1, by: self.isLessWhenTrimmed)
+						case .SortAscending:
+							self.sort(invocation.buffer.lines, in: first.start.line...last.end.line - 1,
+												by: self.isLessWhenTrimmed)
+						case .SortDescending:
+							self.sort(invocation.buffer.lines, in: first.start.line...last.end.line - 1,
+												by: self.isNotLessWhenTrimmed)
+
 						}
 					}
 					completionHandler(nil)
@@ -79,10 +86,14 @@ extension XCSourceEditorCommand {
 					invocation.buffer.lines[index] = line.trim() + String(describing: newText)
 				case .Prepend:
 					invocation.buffer.lines[index] = String(describing: newText) + line.trim()
-				case .Sort:
+				case .SortAscending:
 					self.sort(invocation.buffer.lines,
-										in: first.start.line...last.end.line - 1,
-										by: self.isLessWhenTrimmed)
+						in: first.start.line...last.end.line - 1,
+						by: self.isLessWhenTrimmed)
+				case .SortDescending:
+					self.sort(invocation.buffer.lines,
+						in: first.start.line...last.end.line - 1,
+						by: self.isNotLessWhenTrimmed)
 				}
 			}
 		}
@@ -104,12 +115,21 @@ extension XCSourceEditorCommand {
 	func isLessWhenTrimmed(_ first: String, _ second: String) -> Bool {
 		return first.trimmingCharacters(in: .whitespaces) < second.trimmingCharacters(in: .whitespaces)
 	}
+
+	func isNotLessWhenTrimmed(_ first: String, _ second: String) -> Bool {
+		return first.trimmingCharacters(in: .whitespaces) > second.trimmingCharacters(in: .whitespaces)
+	}
 }
 
 enum EmbellishOperation {
+	/// It appends text to the selected lines
 	case Append
+	/// It preprends text to the selected lines
 	case Prepend
-	case Sort
+	/// It sorts the selected lines Ascending
+	case SortAscending
+/// It sorts the selected lines Descending
+	case SortDescending
 }
 
 

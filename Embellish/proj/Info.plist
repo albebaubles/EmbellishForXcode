@@ -70,11 +70,19 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SortCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).SortCommandAscending</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SortCommand</string>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SortCommandAscending</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Sort</string>
+					<string>Sort Ascending</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SortCommandDescending</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SortCommandDescending</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Sort Descending</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
