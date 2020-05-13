@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 # EmbellishForXcode
  
 ![](./iTunesArtwork.png)
+=======
+EmbellishForXcde
+==
+![](iTunesArtwork.png)
+>>>>>>> dc0b38f... docs
 
 ## Description
 - Xcode source editor extension to assist with common editor needs
