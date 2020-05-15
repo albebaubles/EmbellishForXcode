@@ -23,82 +23,61 @@ extension XCSourceEditorCommand {
 	}
 
 	func performEmbellishOperation(invocation: XCSourceEditorCommandInvocation,
-																 completionHandler: @escaping (Error?) -> Void,
-																 operation: EmbellishOperation, scripted: Bool) {
-		if scripted {
-			script()?.execute(completionHandler: { error in
-				if let error = error {
-					print(error)
-				} else {
-					guard let first = invocation.buffer.selections.firstObject as? XCSourceTextRange,
-						let last = invocation.buffer.selections.lastObject as? XCSourceTextRange,
-						first.start.line < last.end.line,
-						let newText = NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)! else {
-							print("🚩 Embellish: The pasteboard does not contain a string value")
-							AudioServicesPlaySystemSound(1519)
-							return
-					}
+		completionHandler: @escaping (Error?) -> Void,
+		operation: EmbellishOperation) {
+		defer { completionHandler(nil) }
+		guard let first = invocation.buffer.selections.firstObject as? XCSourceTextRange,
+			let last = invocation.buffer.selections.lastObject as? XCSourceTextRange,
+			first.start.line < last.end.line,
+			let newText = NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)! else {
+				print("🚩 Embellish: The pasteboard does not contain a string value")
+				AudioServicesPlaySystemSound(1519)
+				return
+		}
 
-					for index in first.start.line...last.end.line - 1 {
-						guard let line = invocation.buffer.lines[index] as? String else {
-							print("🚩 Embellish: the line does not contain a string value")
-							AudioServicesPlaySystemSound(1519)
-							return
-						}
-
-						switch operation {
-						case .Append:
-							invocation.buffer.lines[index] = line.trim() + String(describing: newText)
-						case .Prepend:
-							invocation.buffer.lines[index] = String(describing: newText) + line.trim()
-						case .SortAscending:
-							self.sort(invocation.buffer.lines, in: first.start.line...last.end.line - 1,
-												by: self.isLessWhenTrimmed)
-						case .SortDescending:
-							self.sort(invocation.buffer.lines, in: first.start.line...last.end.line - 1,
-												by: self.isNotLessWhenTrimmed)
-
-						}
-					}
-					completionHandler(nil)
-				}
-			})
-		} else {
-			defer { completionHandler(nil) }
-			guard let first = invocation.buffer.selections.firstObject as? XCSourceTextRange,
-				let last = invocation.buffer.selections.lastObject as? XCSourceTextRange,
-				first.start.line < last.end.line,
-				let newText = NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)! else {
-					print("🚩 Embellish: The pasteboard does not contain a string value")
-					AudioServicesPlaySystemSound(1519)
-					return
+		for index in first.start.line...last.end.line {
+			guard let line = invocation.buffer.lines[index] as? String else {
+				print("🚩 Embellish: the line does not contain a string value")
+				AudioServicesPlaySystemSound(1519)
+				return
 			}
-
-			for index in first.start.line...last.end.line - 1 {
-				guard let line = invocation.buffer.lines[index] as? String else {
-					print("🚩 Embellish: the line does not contain a string value")
-					AudioServicesPlaySystemSound(1519)
-					return
-				}
-
-				switch operation {
-				case .Append:
-					invocation.buffer.lines[index] = line.trim() + String(describing: newText)
-				case .Prepend:
-					invocation.buffer.lines[index] = String(describing: newText) + line.trim()
-				case .SortAscending:
-					self.sort(invocation.buffer.lines,
-						in: first.start.line...last.end.line - 1,
-						by: self.isLessWhenTrimmed)
-				case .SortDescending:
-					self.sort(invocation.buffer.lines,
-						in: first.start.line...last.end.line - 1,
-						by: self.isNotLessWhenTrimmed)
-				}
+			print("ℹ️ line: (\(line.trim()))")
+			print("ℹ️ newText: (\(newText.trim()))")
+			print("ℹ️ index: \(index)")
+			switch operation {
+			case .Append:
+				invocation.buffer.lines[index] = line.trim().replacingOccurrences(of: "\n", with: "")  + String(describing: newText)
+			case .Prepend:
+				invocation.buffer.lines[index] = String(describing: newText).trim() + line.trim()
+			case .SortAscending:
+				self.sort(invocation.buffer.lines,
+					in: first.start.line...last.end.line,
+					by: self.isLess)
+			case .SortDescending:
+				self.sort(invocation.buffer.lines,
+					in: first.start.line...last.end.line,
+					by: self.isMore)
 			}
 		}
 	}
 
+	func performEmbellishOperationScripted(invocation: XCSourceEditorCommandInvocation,
+		completionHandler: @escaping (Error?) -> Void,
+		operation: EmbellishOperation) {
+		script()?.execute(completionHandler: { error in
+			if let error = error {
+				print(error)
+			} else {
+				self.performEmbellishOperation(invocation: invocation,
+					completionHandler: completionHandler,
+					operation: operation)
+			}
+			completionHandler(nil)
+		})
+	}
+
+
+	/// sort the range of items in the array by comparator
 	func sort(_ input: NSMutableArray, in range: CountableClosedRange<Int>, by comparator: (String, String) -> Bool) {
 		guard range.upperBound < input.count, range.lowerBound >= 0 else {
 			return
@@ -112,11 +91,13 @@ extension XCSourceEditorCommand {
 		}
 	}
 
-	func isLessWhenTrimmed(_ first: String, _ second: String) -> Bool {
+	/// less than comparator for sorting
+	func isLess(_ first: String, _ second: String) -> Bool {
 		return first.trimmingCharacters(in: .whitespaces) < second.trimmingCharacters(in: .whitespaces)
 	}
 
-	func isNotLessWhenTrimmed(_ first: String, _ second: String) -> Bool {
+	/// greater than comparator for sorting
+	func isMore(_ first: String, _ second: String) -> Bool {
 		return first.trimmingCharacters(in: .whitespaces) > second.trimmingCharacters(in: .whitespaces)
 	}
 }
