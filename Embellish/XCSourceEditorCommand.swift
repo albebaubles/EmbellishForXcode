@@ -18,7 +18,6 @@ extension XCSourceEditorCommand {
 		guard let script = try? NSUserAppleScriptTask(url: URL(fileURLWithPath: homeDirPath)) else {
 			return nil
 		}
-		print("🚩 Embellish: get script")
 		return script
 	}
 
@@ -41,12 +40,10 @@ extension XCSourceEditorCommand {
 				AudioServicesPlaySystemSound(1519)
 				return
 			}
-			print("ℹ️ line: (\(line.trim()))")
-			print("ℹ️ newText: (\(newText.trim()))")
-			print("ℹ️ index: \(index)")
+
 			switch operation {
 			case .Append:
-				invocation.buffer.lines[index] = line.trim().replacingOccurrences(of: "\n", with: "")  + String(describing: newText)
+				invocation.buffer.lines[index] = line.trim().replacingOccurrences(of: "\n", with: "") + String(describing: newText)
 			case .Prepend:
 				invocation.buffer.lines[index] = String(describing: newText).trim() + line.trim()
 			case .SortAscending:
@@ -98,7 +95,7 @@ extension XCSourceEditorCommand {
 
 	/// greater than comparator for sorting
 	func isMore(_ first: String, _ second: String) -> Bool {
-		return first.trimmingCharacters(in: .whitespaces) > second.trimmingCharacters(in: .whitespaces)
+		return !isLess(first, second)
 	}
 }
 
