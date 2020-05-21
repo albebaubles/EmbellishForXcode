@@ -10,11 +10,24 @@ import AudioToolbox
 import Carbon
 
 extension XCSourceEditorCommand {
-	func script() -> NSUserAppleScriptTask? {
-		let homeDirPath = FileManager().urls(for: .applicationScriptsDirectory,
-			in: .userDomainMask).first!.absoluteString + Bundle.main.bundleIdentifier! + "/Embellish.scpt"
+	var scriptPath: URL? {
+		return try? FileManager.default.url(
+			for: .applicationScriptsDirectory,
+			in: .userDomainMask,
+			appropriateFor: nil,
+			create: true
+		)
+	}
 
-		guard let script = try? NSUserAppleScriptTask(url: URL(fileURLWithPath: homeDirPath)) else {
+	func fileScriptPath(fileName: String) -> URL? {
+		return scriptPath?
+			.appendingPathComponent(fileName)
+			.appendingPathExtension("scpt")
+	}
+
+	func script() -> NSUserAppleScriptTask? {
+
+		guard let script = try? NSUserAppleScriptTask(url: fileScriptPath(fileName: "Embellish")!) else {
 			print("🚩 unable to load script")
 			return nil
 		}
