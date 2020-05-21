@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B425E031242A5FD900E0F5B1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E030242A5FD900E0F5B1 /* Commands.swift */; };
+		B4650625247462E600C878C9 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4650624247462E600C878C9 /* SourceEditorExtension.swift */; };
 		B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBA1B8246CACB200DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBDEBA2462061E000FCB90 /* XCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953965E46242521E59A23966 /* XCSourceEditorCommand.swift */; };
 		B4E2103F242D676900732D7E /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
+		B4EA9F972476E6E500551DE8 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = B4EA9F962476E6E500551DE8 /* install.sh */; };
 		B4F2511B242AA2B300C92183 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511A242AA2B300C92183 /* README.md */; };
 		B4F2511F242AAD2500C92183 /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4F99D6F2410291800307B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D6E2410291800307B5F /* AppDelegate.swift */; };
@@ -19,7 +21,6 @@
 		B4F99D732410291900307B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F99D722410291900307B5F /* Assets.xcassets */; };
 		B4F99D762410291900307B5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F99D742410291900307B5F /* Main.storyboard */; };
 		B4F99D852410292600307B5F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F99D842410292600307B5F /* Cocoa.framework */; };
-		B4F99D882410292700307B5F /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D872410292700307B5F /* SourceEditorExtension.swift */; };
 		B4F99D8F2410292700307B5F /* Embellish.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B4F99D822410292600307B5F /* Embellish.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B4F99D9524102D6700307B5F /* FormatCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D9424102D6700307B5F /* FormatCommand.swift */; };
 		B4F99D9B24102EA900307B5F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D9824102EA900307B5F /* Extension.swift */; };
@@ -60,7 +61,9 @@
 /* Begin PBXFileReference section */
 		953965E46242521E59A23966 /* XCSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSourceEditorCommand.swift; sourceTree = "<group>"; };
 		B425E030242A5FD900E0F5B1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		B4650624247462E600C878C9 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		B4EA9F962476E6E500551DE8 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		B4F2511A242AA2B300C92183 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B4F2511E242AAD2500C92183 /* Embellish.scpt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Embellish.scpt; sourceTree = "<group>"; };
 		B4F99D6B2410291800307B5F /* EmbellishForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmbellishForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +75,6 @@
 		B4F99D782410291900307B5F /* EmbellishForXcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmbellishForXcode.entitlements; sourceTree = "<group>"; };
 		B4F99D822410292600307B5F /* Embellish.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Embellish.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F99D842410292600307B5F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		B4F99D872410292700307B5F /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		B4F99D8B2410292700307B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4F99D8C2410292700307B5F /* Embellish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Embellish.entitlements; sourceTree = "<group>"; };
 		B4F99D9424102D6700307B5F /* FormatCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCommand.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		B4F99D622410291800307B5F = {
 			isa = PBXGroup;
 			children = (
+				B4EA9F962476E6E500551DE8 /* install.sh */,
 				B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */,
 				B4F2511A242AA2B300C92183 /* README.md */,
 				B4F99D6D2410291800307B5F /* EmbellishForXcode */,
@@ -168,10 +171,10 @@
 		B4F99D862410292600307B5F /* Embellish */ = {
 			isa = PBXGroup;
 			children = (
+				B4650624247462E600C878C9 /* SourceEditorExtension.swift */,
 				B4BBDEBB246215E1000FCB90 /* proj */,
 				B425E030242A5FD900E0F5B1 /* Commands.swift */,
 				B4F99D9424102D6700307B5F /* FormatCommand.swift */,
-				B4F99D872410292700307B5F /* SourceEditorExtension.swift */,
 				953965E46242521E59A23966 /* XCSourceEditorCommand.swift */,
 				B4F99DAA24102EC600307B5F /* parsingFromSwimat */,
 				B4ABF7F3242BF79100C48B26 /* scripts */,
@@ -280,6 +283,7 @@
 				B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */,
 				B4F99D732410291900307B5F /* Assets.xcassets in Resources */,
 				B4F99D762410291900307B5F /* Main.storyboard in Resources */,
+				B4EA9F972476E6E500551DE8 /* install.sh in Resources */,
 				B4E2103F242D676900732D7E /* Embellish.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,11 +315,11 @@
 			files = (
 				B4F99D9524102D6700307B5F /* FormatCommand.swift in Sources */,
 				B4BBDEBA2462061E000FCB90 /* XCSourceEditorCommand.swift in Sources */,
-				B4F99D882410292700307B5F /* SourceEditorExtension.swift in Sources */,
 				B4F99D9B24102EA900307B5F /* Extension.swift in Sources */,
 				B4F99DA424102EB100307B5F /* Pref.swift in Sources */,
 				B4F99DA524102EB100307B5F /* Preferences.swift in Sources */,
 				B4F99DA624102EB100307B5F /* Parser.swift in Sources */,
+				B4650625247462E600C878C9 /* SourceEditorExtension.swift in Sources */,
 				B4F99DA724102EB100307B5F /* SwimAtSwiftParser.swift in Sources */,
 				B4F99DA824102EB100307B5F /* FormatError.swift in Sources */,
 				B4F99DA924102EB100307B5F /* Indent.swift in Sources */,

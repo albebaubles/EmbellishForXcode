@@ -12,10 +12,10 @@ import Carbon
 extension XCSourceEditorCommand {
 	func script() -> NSUserAppleScriptTask? {
 		let homeDirPath = FileManager().urls(for: .applicationScriptsDirectory,
-			in: .userDomainMask).first!.absoluteString +
-			Bundle.main.bundleIdentifier! + "/Embellish.scpt"
+			in: .userDomainMask).first!.absoluteString + Bundle.main.bundleIdentifier! + "/Embellish.scpt"
 
 		guard let script = try? NSUserAppleScriptTask(url: URL(fileURLWithPath: homeDirPath)) else {
+			print("🚩 unable to load script")
 			return nil
 		}
 		return script
@@ -46,6 +46,8 @@ extension XCSourceEditorCommand {
 				invocation.buffer.lines[index] = line.trim().replacingOccurrences(of: "\n", with: "") + String(describing: newText)
 			case .Prepend:
 				invocation.buffer.lines[index] = String(describing: newText).trim() + line.trim()
+			case .Replace:
+				print("replace not yet implemented")
 			case .SortAscending:
 				self.sort(invocation.buffer.lines,
 					in: first.start.line...last.end.line,
@@ -61,7 +63,9 @@ extension XCSourceEditorCommand {
 	func performEmbellishOperationScripted(invocation: XCSourceEditorCommandInvocation,
 		completionHandler: @escaping (Error?) -> Void,
 		operation: EmbellishOperation) {
-		script()?.execute(completionHandler: { error in
+
+		let event = operation == .Replace ?   eventDescriptior(functionName: "replace") :  eventDescriptior(functionName: "insert")
+		script()?.execute(withAppleEvent: event, completionHandler: { descriptorOut, error in
 			if let error = error {
 				print(error)
 			} else {
@@ -73,6 +77,27 @@ extension XCSourceEditorCommand {
 		})
 	}
 
+	func eventDescriptior(functionName: String) -> NSAppleEventDescriptor {
+		var psn = ProcessSerialNumber(highLongOfPSN: 0, lowLongOfPSN: UInt32(kCurrentProcess))
+		let target = NSAppleEventDescriptor(
+			descriptorType: typeProcessSerialNumber,
+			bytes: &psn,
+			length: MemoryLayout<ProcessSerialNumber>.size
+		)
+
+		let event = NSAppleEventDescriptor(
+			eventClass: UInt32(kASAppleScriptSuite),
+			eventID: UInt32(kASSubroutineEvent),
+			targetDescriptor: target,
+			returnID: Int16(kAutoGenerateReturnID),
+			transactionID: Int32(kAnyTransactionID)
+		)
+
+		let function = NSAppleEventDescriptor(string: functionName)
+		event.setParam(function, forKeyword: AEKeyword(keyASSubroutineName))
+
+		return event
+	}
 
 	/// sort the range of items in the array by comparator
 	func sort(_ input: NSMutableArray, in range: CountableClosedRange<Int>, by comparator: (String, String) -> Bool) {
@@ -105,6 +130,7 @@ enum EmbellishOperation {
 	/// It preprends text to the selected lines
 	case Prepend
 	/// It sorts the selected lines Ascending
+	case Replace
 	case SortAscending
 /// It sorts the selected lines Descending
 	case SortDescending

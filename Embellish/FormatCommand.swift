@@ -23,9 +23,7 @@ class FormatCommand: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation,
 		completionHandler: @escaping (Error?) -> Void) {
 
-		let uti = invocation.buffer.contentUTI
-
-		guard supportUTIs.contains(uti) else {
+		guard supportUTIs.contains( invocation.buffer.contentUTI) else {
 			completionHandler(nil)
 			return
 		}
