@@ -62,6 +62,14 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).ReplaceSelectionCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).ReplaceSelectionCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Replace...</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).FormatCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).FormatCommand</string>

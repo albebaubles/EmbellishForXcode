@@ -56,7 +56,9 @@ extension XCSourceEditorCommand {
 			case .Prepend:
 				invocation.buffer.lines[index] = String(describing: stringData!).trim() + line.trim()
 			case .Replace:
-				print("replace not yet implemented")
+				let oldText = stringData!.split(separator: "🔆")[0]
+				let newText = stringData!.split(separator: "🔆")[1]
+				invocation.buffer.lines[index] = (invocation.buffer.lines[index] as! String).replacingOccurrences(of: oldText, with: newText)
 			case .SortAscending:
 				self.sort(invocation.buffer.lines,
 					in: first.start.line...last.end.line,

@@ -25,6 +25,14 @@ class AppendSelectionCommand: NSObject, XCSourceEditorCommand {
 	}
 }
 
+/// run **Embellish.scpt** to capture input text and append to the selected lines
+class ReplaceSelectionCommand: NSObject, XCSourceEditorCommand {
+	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
+		performEmbellishOperationScripted(invocation: invocation, completionHandler: completionHandler, operation: .Replace )
+	}
+}
+
+
 /// prepend text in pasteboard to the selected lines
 class PrependCommand: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
