@@ -60,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		953965E46242521E59A23966 /* XCSourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSourceEditorCommand.swift; sourceTree = "<group>"; };
+		B420249B247F0CED0074E215 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		B425E030242A5FD900E0F5B1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		B4650624247462E600C878C9 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		B4F99D832410292600307B5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B420249B247F0CED0074E215 /* XcodeKit.framework */,
 				B4F99D842410292600307B5F /* Cocoa.framework */,
 			);
 			name = Frameworks;

@@ -26,7 +26,6 @@ extension XCSourceEditorCommand {
 	}
 
 	func script() -> NSUserAppleScriptTask? {
-
 		guard let script = try? NSUserAppleScriptTask(url: fileScriptPath(fileName: "Embellish")!) else {
 			print("🚩 unable to load script")
 			return nil
@@ -34,31 +33,28 @@ extension XCSourceEditorCommand {
 		return script
 	}
 
-	func performEmbellishOperation(invocation: XCSourceEditorCommandInvocation,
+	func performEmbellishOperation(stringData: String? = "", invocation: XCSourceEditorCommandInvocation,
 		completionHandler: @escaping (Error?) -> Void,
 		operation: EmbellishOperation) {
 		defer { completionHandler(nil) }
 		guard let first = invocation.buffer.selections.firstObject as? XCSourceTextRange,
 			let last = invocation.buffer.selections.lastObject as? XCSourceTextRange,
-			first.start.line < last.end.line,
-			let newText = NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)! else {
-				print("🚩 Embellish: The pasteboard does not contain a string value")
-				AudioServicesPlaySystemSound(1519)
+			first.start.line < last.end.line else {
+				print("🚩 Embellish: The selection does not contain a string value")
 				return
 		}
 
 		for index in first.start.line...last.end.line {
 			guard let line = invocation.buffer.lines[index] as? String else {
 				print("🚩 Embellish: the line does not contain a string value")
-				AudioServicesPlaySystemSound(1519)
 				return
 			}
 
 			switch operation {
 			case .Append:
-				invocation.buffer.lines[index] = line.trim().replacingOccurrences(of: "\n", with: "") + String(describing: newText)
+				invocation.buffer.lines[index] = line.trim().replacingOccurrences(of: "\n", with: "") + String(describing: stringData!)
 			case .Prepend:
-				invocation.buffer.lines[index] = String(describing: newText).trim() + line.trim()
+				invocation.buffer.lines[index] = String(describing: stringData!).trim() + line.trim()
 			case .Replace:
 				print("replace not yet implemented")
 			case .SortAscending:
@@ -77,12 +73,12 @@ extension XCSourceEditorCommand {
 		completionHandler: @escaping (Error?) -> Void,
 		operation: EmbellishOperation) {
 
-		let event = operation == .Replace ?   eventDescriptior(functionName: "replace") :  eventDescriptior(functionName: "insert")
+		let event = operation == .Replace ? eventDescriptior(functionName: "replace") :  eventDescriptior(functionName: "insert")
 		script()?.execute(withAppleEvent: event, completionHandler: { descriptorOut, error in
 			if let error = error {
 				print(error)
 			} else {
-				self.performEmbellishOperation(invocation: invocation,
+				self.performEmbellishOperation( stringData: descriptorOut?.stringValue, invocation: invocation,
 					completionHandler: completionHandler,
 					operation: operation)
 			}

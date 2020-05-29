@@ -14,21 +14,21 @@ import AudioToolbox
 /// append text in pasteboard to the selected lines
 class AppendCommand: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperation(invocation: invocation, completionHandler: completionHandler, operation: .Append)
+		performEmbellishOperation(stringData: (NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!), invocation: invocation, completionHandler: completionHandler, operation: .Append)
 	}
 }
 
 /// run **Embellish.scpt** to capture input text and append to the selected lines
 class AppendSelectionCommand: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperationScripted(invocation: invocation, completionHandler: completionHandler, operation: .Append)
+		performEmbellishOperationScripted(invocation: invocation, completionHandler: completionHandler, operation: .Append )
 	}
 }
 
 /// prepend text in pasteboard to the selected lines
 class PrependCommand: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperation(invocation: invocation, completionHandler: completionHandler, operation: .Prepend)
+		performEmbellishOperation(stringData: (NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!)!, invocation: invocation, completionHandler: completionHandler, operation: .Prepend)
 	}
 }
 
@@ -42,7 +42,7 @@ class PrependSelectionCommand: NSObject, XCSourceEditorCommand {
 /// sort the selected lines ascending collation
 class SortCommandAscending: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperation(invocation: invocation, completionHandler: completionHandler, operation: .SortAscending)
+		performEmbellishOperation( stringData: (NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!), invocation: invocation, completionHandler: completionHandler, operation: .SortAscending)
 	}
 }
 
