@@ -26,6 +26,8 @@ Prepend the text in the clipboard into the selected lines
 ### Prepend...
 Accept text via dialog and prepend it into the selected lines
 
+### Replace..
+Accept find and replace text dialog and perform a find/replace the selected lines
 
 ### Sort (asc & desc)
 Sort the selected lines
@@ -33,9 +35,6 @@ Sort the selected lines
 
 ### Format Swift
 This is a direct copy from [https://github.com/Jintin/Swimat](https://github.com/Jintin/Swimat) - you don't mess with perfection!
-
-### UP NEXT
-Need to add support to delete text and/or replace from the selected number of lines.
 
 ## License
 
