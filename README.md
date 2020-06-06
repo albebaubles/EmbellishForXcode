@@ -27,7 +27,7 @@ Prepend the text in the clipboard into the selected lines
 Accept text via dialog and prepend it into the selected lines
 
 ### Replace..
-Accept find and replace text dialog and perform a find/replace the selected lines
+Accept find and replace text dialog and perform a find/replace the in selected lines
 
 ### Sort (asc & desc)
 Sort the selected lines
