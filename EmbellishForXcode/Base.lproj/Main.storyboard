@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -709,23 +709,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8SS-SJ-x5x">
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8SS-SJ-x5x">
                                 <rect key="frame" x="20" y="62" width="145" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="bzO-X1-r9v"/>
+                                    <constraint firstAttribute="width" constant="145" id="uHy-0W-jEn"/>
+                                </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="Z9f-pt-4nD"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5S-uu-M7f">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z5S-uu-M7f">
                                 <rect key="frame" x="34" y="206" width="245" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kcO-r1-rtz"/>
+                                    <constraint firstAttribute="width" constant="241" id="nrk-as-zUM"/>
+                                </constraints>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="EmbellishForXcode" id="lgz-zC-9Dj">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deV-SY-YOs">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="deV-SY-YOs">
                                 <rect key="frame" x="165" y="99" width="274" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="biE-Z5-VRH"/>
+                                    <constraint firstAttribute="width" constant="270" id="fHl-2B-4RS"/>
+                                </constraints>
                                 <textFieldCell key="cell" selectable="YES" title="Tou use, turn on Embellish in  System Preferences / Extensions." id="uri-Em-irp">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -733,6 +742,14 @@
                                 </textFieldCell>
                             </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="deV-SY-YOs" firstAttribute="top" secondItem="z5S-uu-M7f" secondAttribute="bottom" constant="23" id="C4z-XK-nLR"/>
+                            <constraint firstAttribute="bottom" secondItem="deV-SY-YOs" secondAttribute="bottom" constant="99" id="Hz1-d3-HHd"/>
+                            <constraint firstItem="8SS-SJ-x5x" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="N26-2M-ePc"/>
+                            <constraint firstItem="deV-SY-YOs" firstAttribute="leading" secondItem="8SS-SJ-x5x" secondAttribute="trailing" constant="2" id="Vcf-q2-rZB"/>
+                            <constraint firstItem="z5S-uu-M7f" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="36" id="qbB-wp-FAG"/>
+                            <constraint firstAttribute="trailing" secondItem="deV-SY-YOs" secondAttribute="trailing" constant="43" id="r9V-X0-5Na"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -741,6 +758,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="512" height="512"/>
+        <image name="logo" width="1024" height="1024"/>
     </resources>
 </document>

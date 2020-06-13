@@ -75,12 +75,12 @@ extension XCSourceEditorCommand {
 		completionHandler: @escaping (Error?) -> Void,
 		operation: EmbellishOperation) {
 
-		let event = operation == .Replace ? eventDescriptior(functionName: "replace") :  eventDescriptior(functionName: "insert")
+		let event = operation == .Replace ? eventDescriptior(functionName: "replace") : eventDescriptior(functionName: "insert")
 		script()?.execute(withAppleEvent: event, completionHandler: { descriptorOut, error in
 			if let error = error {
 				print(error)
 			} else {
-				self.performEmbellishOperation( stringData: descriptorOut?.stringValue, invocation: invocation,
+				self.performEmbellishOperation(stringData: descriptorOut?.stringValue, invocation: invocation,
 					completionHandler: completionHandler,
 					operation: operation)
 			}

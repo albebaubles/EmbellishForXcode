@@ -17,10 +17,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		// Insert code here to initialize your application
 		let def = UserDefaults.init(suiteName: "com.apple.osascript")
 		def?.synchronize()
-//		let def = UserDefaults.standard
-
-//		let x =  UserDefaults.init(suiteName: "Embellish")!.array(forKey: "insert")!
-		//print("🚩" + x as String)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
