@@ -5,7 +5,7 @@
 
 
 ## Description
-- Xcode source editor extension to assist with common editor needs
+- Xcode source editor extension to assist with common editor needs.  Supports Apple Silicon.
 
 
 ## Features
