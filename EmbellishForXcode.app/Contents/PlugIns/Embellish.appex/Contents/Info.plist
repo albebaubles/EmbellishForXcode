@@ -2,26 +2,48 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BuildMachineOSBuild</key>
+	<string>20A5374i</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>Embellish</string>
 	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
+	<string>Embellish</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>com.albebaubles.EmbellishForXcode.Embellish</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>Embellish</string>
 	<key>CFBundlePackageType</key>
-	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>12A7208</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>10.15.6</string>
+	<key>DTSDKBuild</key>
+	<string>19G68</string>
+	<key>DTSDKName</key>
+	<string>macosx10.15</string>
+	<key>DTXcode</key>
+	<string>1200</string>
+	<key>DTXcodeBuild</key>
+	<string>12A7208</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<string>10.14</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
@@ -30,71 +52,71 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).AppendSelectionCommand</string>
+					<string>Embellish.AppendSelectionCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).AppendSelectionCommand</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.AppendSelectionCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Append...</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).AppendCommand</string>
+					<string>Embellish.AppendCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).AppendCommand</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.AppendCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Append Pastboard Text</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).PrependSelectionCommand</string>
+					<string>Embellish.PrependSelectionCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).PrependSelectionCommand</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.PrependSelectionCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Prepend...</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).PrependCommand</string>
+					<string>Embellish.PrependCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).PrependCommand</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.PrependCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Prepend Pasteboard Text</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).ReplaceSelectionCommand</string>
+					<string>Embellish.ReplaceSelectionCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).ReplaceSelectionCommand</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.ReplaceSelectionCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Replace...</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).FormatCommand</string>
+					<string>Embellish.FormatCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).FormatCommand</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.FormatCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Format</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SortCommandAscending</string>
+					<string>Embellish.SortCommandAscending</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SortCommandAscending</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.SortCommandAscending</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Sort Ascending</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SortCommandDescending</string>
+					<string>Embellish.SortCommandDescending</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SortCommandDescending</string>
+					<string>com.albebaubles.EmbellishForXcode.Embellish.SortCommandDescending</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Sort Descending</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
-			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>
+			<string>Embellish.SourceEditorExtension</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.dt.Xcode.extension.source-editor</string>

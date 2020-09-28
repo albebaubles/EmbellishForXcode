@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B4241D8124ED799D00F0973C /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B420249B247F0CED0074E215 /* XcodeKit.framework */; };
-		B4241D8224ED799D00F0973C /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B420249B247F0CED0074E215 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B425E031242A5FD900E0F5B1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E030242A5FD900E0F5B1 /* Commands.swift */; };
+		B4274E2D2520F13E002522AF /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4650625247462E600C878C9 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4650624247462E600C878C9 /* SourceEditorExtension.swift */; };
 		B4858EAF24DC622100F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
 		B4858EB024DC622C00F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
@@ -19,7 +19,6 @@
 		B4E2103F242D676900732D7E /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4EA9F972476E6E500551DE8 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = B4EA9F962476E6E500551DE8 /* install.sh */; };
 		B4F2511B242AA2B300C92183 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511A242AA2B300C92183 /* README.md */; };
-		B4F2511F242AAD2500C92183 /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4F99D6F2410291800307B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D6E2410291800307B5F /* AppDelegate.swift */; };
 		B4F99D712410291800307B5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D702410291800307B5F /* ViewController.swift */; };
 		B4F99D732410291900307B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F99D722410291900307B5F /* Assets.xcassets */; };
@@ -49,17 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B4241D8324ED799D00F0973C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B4241D8224ED799D00F0973C /* XcodeKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B4F99D932410292700307B5F /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,7 +237,6 @@
 				B4F99D7E2410292600307B5F /* Sources */,
 				B4F99D7F2410292600307B5F /* Frameworks */,
 				B4F99D802410292600307B5F /* Resources */,
-				B4241D8324ED799D00F0973C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,8 +293,8 @@
 				B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */,
 				B4F99D732410291900307B5F /* Assets.xcassets in Resources */,
 				B4F99D762410291900307B5F /* Main.storyboard in Resources */,
-				B4EA9F972476E6E500551DE8 /* install.sh in Resources */,
 				B4E2103F242D676900732D7E /* Embellish.scpt in Resources */,
+				B4EA9F972476E6E500551DE8 /* install.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4BBA1B8246CACB200DB241B /* iTunesArtwork.png in Resources */,
-				B4F2511F242AAD2500C92183 /* Embellish.scpt in Resources */,
+				B4274E2D2520F13E002522AF /* Embellish.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +485,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4NN457KWJ4;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EmbellishForXcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,6 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.EmbellishForXcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -520,7 +509,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4NN457KWJ4;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EmbellishForXcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -529,6 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.EmbellishForXcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -541,7 +532,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4NN457KWJ4;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Embellish/proj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -565,7 +557,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4NN457KWJ4;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Embellish/proj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -4,7 +4,20 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
-	<key>com.apple.security.files.user-selected.read-only</key>
+	<key>com.apple.security.temporary-exception.files.home-relative-path.read-write</key>
+	<array>
+		<string>${HOME}/Library/Application Scripts/</string>
+		<string>${HOME}/Library/Application Scripts/com.albebaubles.EmbellishForXcode</string>
+	</array>
+	<key>com.apple.developer.system-extension.install</key>
 	<true/>
+	<key>com.apple.security.files.user-selected.executable</key>
+	<array>
+		<string>${HOME}/Library/Application Scripts/</string>
+	</array>
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<array>
+		<string>${HOME}/Library/Application Scripts/</string>
+	</array>
 </dict>
 </plist>

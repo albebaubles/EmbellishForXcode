@@ -1,0 +1,13 @@
+git_url("ssh://git@github.com/albebaubles/certs")
+git_user_email("al@albebaubles.com")
+
+storage_mode("git")
+
+app_identifier "com.albebaubles.EmbellishForXcode"
+
+type ("development")
+
+username("dalancorbett@gmail.com")
+
+# shallow_clone true
+force_for_new_devices true

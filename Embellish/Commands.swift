@@ -7,9 +7,9 @@
 //
 
 import AppKit
+import AudioToolbox
 import Foundation
 import XcodeKit
-import AudioToolbox
 
 /// append text in pasteboard to the selected lines
 class AppendCommand: NSObject, XCSourceEditorCommand {

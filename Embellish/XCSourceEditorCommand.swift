@@ -27,6 +27,7 @@ extension XCSourceEditorCommand {
 
 	func script() -> NSUserAppleScriptTask? {
 		guard let script = try? NSUserAppleScriptTask(url: fileScriptPath(fileName: "Embellish")!) else {
+			// since this is an add-in, do not raise an error
 			print("🚩 unable to load script")
 			return nil
 		}
@@ -40,12 +41,14 @@ extension XCSourceEditorCommand {
 		guard let first = invocation.buffer.selections.firstObject as? XCSourceTextRange,
 			let last = invocation.buffer.selections.lastObject as? XCSourceTextRange,
 			first.start.line < last.end.line else {
+				// since this is an add-in, do not raise an error
 				print("🚩 Embellish: The selection does not contain a string value")
 				return
 		}
 
 		for index in first.start.line...last.end.line {
 			guard let line = invocation.buffer.lines[index] as? String else {
+				// since this is an add-in, do not raise an error
 				print("🚩 Embellish: the line does not contain a string value")
 				return
 			}
@@ -75,7 +78,8 @@ extension XCSourceEditorCommand {
 		completionHandler: @escaping (Error?) -> Void,
 		operation: EmbellishOperation) {
 
-		let event = operation == .Replace ? eventDescriptior(functionName: "replace") : eventDescriptior(functionName: "insert")
+		guard let event = operation == .Replace ? eventDescriptior(functionName: "replace"):
+			eventDescriptior(functionName: "insert") else { return }
 		script()?.execute(withAppleEvent: event, completionHandler: { descriptorOut, error in
 			if let error = error {
 				print(error)
@@ -88,13 +92,13 @@ extension XCSourceEditorCommand {
 		})
 	}
 
-	func eventDescriptior(functionName: String) -> NSAppleEventDescriptor {
+	func eventDescriptior(functionName: String) -> NSAppleEventDescriptor? {
 		var psn = ProcessSerialNumber(highLongOfPSN: 0, lowLongOfPSN: UInt32(kCurrentProcess))
-		let target = NSAppleEventDescriptor(
+		guard let target = NSAppleEventDescriptor(
 			descriptorType: typeProcessSerialNumber,
 			bytes: &psn,
 			length: MemoryLayout<ProcessSerialNumber>.size
-		)
+		) else { return nil }
 
 		let event = NSAppleEventDescriptor(
 			eventClass: UInt32(kASAppleScriptSuite),
