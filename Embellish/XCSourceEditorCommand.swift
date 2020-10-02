@@ -26,9 +26,11 @@ extension XCSourceEditorCommand {
 	}
 
 	func script() -> NSUserAppleScriptTask? {
+
+		NSLog("🚩 before load script")
 		guard let script = try? NSUserAppleScriptTask(url: fileScriptPath(fileName: "Embellish")!) else {
 			// since this is an add-in, do not raise an error
-			print("🚩 unable to load script")
+			NSLog("🚩 unable to load script")
 			return nil
 		}
 		return script

@@ -34,7 +34,7 @@ class ViewController: NSViewController {
 	}
 
 	@IBAction func copyScript(_ sender: Any) {
-		shell("open -a Terminal")
+		_ = shell("open -a Terminal")
 	}
 
 	@IBAction func showPreferences(_ sender: Any) {
