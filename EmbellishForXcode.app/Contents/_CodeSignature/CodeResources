@@ -10,23 +10,23 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		k1ruXmiLFRQYjqdDcbdQXwGHvs0=
+		Jsbr6FdJ7IRhUKEVGiOKT+BkrX8=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		fizt0a5hgMx6ZNVAhCA5TH3vKfE=
+		V8FPcob+OHxHe39K5dwvwGkdvno=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		bEa4N3NgApoqA8+liUto22TxT1w=
+		3c33XXDSnkxvQ2Lo690WSaiqvo0=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<data>
-		oARGo2EEj4GlvDEdEycPmQIJSG8=
+		zin+14POFNFyv9tFb3myk3iKaF8=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		FfenErz1jKIz6uqfwiSQzuMPgv8=
+		cxx62OzK2TtIkrwF+qnVvpho4CQ=
 		</data>
 		<key>Resources/Embellish.scpt</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Resources/install.sh</key>
 		<data>
-		MJP93SX1EDeSfMTsqSObEdkBktM=
+		su1EH9RuNB9ZibxlxwGUQT4Zjkg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			woPt+61DQpgqtmb1XPAUrVMgWE4=
+			09qGnvUhOOr5+KuxT6EkPJnJ1No=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.albebaubles.EmbellishForXcode.Embellish" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: dewayne Corbett (38XK574NNJ)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -67,35 +67,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SUedjRrAsDJrkssXSl9Vm3P3YlXSrmvOk5FMmxpLqNo=
+			05dZOu59z+2n2glCZzooXRLAJEsfNxd0d47DeUP0Amw=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C0VJ26HPrq96I0p97Fbwr0U/xOf+5SVStX5S2+Ieu6A=
+			s3jCclv5vfOsB5n54ap72cix1hb2k7CTCJGLVCxAoAo=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HqUBJM1lFGFU/CGPg2bQNGuOc35Uq3vNaMJZxIKto0E=
+			Q6LCCkc5rINiK7OolvUdAunOLczx82/tltsTTywo9RM=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SNFXOmx5kxL2C4ZHuZ7w4MHVkAZAVhJi610XAT04ZqE=
+			bROPEC8sI8BoXWWyzQGl0BCtFgoXfdTWri1NXikeNhw=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eV7xUGzSOkBcdl7GOkArEyV2jZ6OgN1pmeM/2qkKOQY=
+			EL9CY0pU+JRAYUCoV7bM56A/Qer4fu9hHArVlYk0hd8=
 			</data>
 		</dict>
 		<key>Resources/Embellish.scpt</key>
@@ -123,7 +123,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iGuNxRhycyUdIEgQiRro/XKytJPYajJ1CkQO3cEthhg=
+			kwH1Gng6HvRFzLQxxfNAxyZe7pyB6GzkMWhH65sYZF4=
 			</data>
 		</dict>
 	</dict>
