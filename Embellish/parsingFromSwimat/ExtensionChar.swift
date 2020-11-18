@@ -32,5 +32,4 @@ extension Character {
     func isBlank() -> Bool {
         return isSpace() || self == "\n"
     }
-
 }

@@ -13,7 +13,6 @@
 		B4650625247462E600C878C9 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4650624247462E600C878C9 /* SourceEditorExtension.swift */; };
 		B4858EAF24DC622100F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
 		B4858EB024DC622C00F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
-		B488F3F42527A81700D7F0C2 /* playtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488F3F32527A81700D7F0C2 /* playtime.swift */; };
 		B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBA1B8246CACB200DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBDEBA2462061E000FCB90 /* XCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953965E46242521E59A23966 /* XCSourceEditorCommand.swift */; };
@@ -68,7 +67,6 @@
 		B425E030242A5FD900E0F5B1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		B4650624247462E600C878C9 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		B4858EAE24DC622100F9ED02 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		B488F3F32527A81700D7F0C2 /* playtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playtime.swift; sourceTree = "<group>"; };
 		B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		B4EA9F962476E6E500551DE8 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		B4F2511A242AA2B300C92183 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 		B4F99D622410291800307B5F = {
 			isa = PBXGroup;
 			children = (
-				B488F3F32527A81700D7F0C2 /* playtime.swift */,
 				B4EA9F962476E6E500551DE8 /* install.sh */,
 				B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */,
 				B4F2511A242AA2B300C92183 /* README.md */,
@@ -319,7 +316,6 @@
 			files = (
 				B4F99D712410291800307B5F /* ViewController.swift in Sources */,
 				B4F99D6F2410291800307B5F /* AppDelegate.swift in Sources */,
-				B488F3F42527A81700D7F0C2 /* playtime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

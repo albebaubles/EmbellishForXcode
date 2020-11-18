@@ -23,7 +23,7 @@ class FormatCommand: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation,
 		completionHandler: @escaping (Error?) -> Void) {
 
-		guard supportUTIs.contains( invocation.buffer.contentUTI) else {
+		guard supportUTIs.contains(invocation.buffer.contentUTI) else {
 			completionHandler(nil)
 			return
 		}
@@ -31,7 +31,7 @@ class FormatCommand: NSObject, XCSourceEditorCommand {
 		if invocation.buffer.usesTabsForIndentation {
 			Indent.char = "\t"
 		} else {
-			Indent.char = String(repeating: " ", count: invocation.buffer.indentationWidth)
+			Indent.char = String(repeating: String.space(), count: invocation.buffer.indentationWidth)
 		}
 
 		let parser = SwimAtSwiftParser(string: invocation.buffer.completeBuffer)
@@ -79,4 +79,16 @@ extension XCSourceTextPosition: Equatable {
 		return left.column == right.column && left.line == right.line
 	}
 
+}
+
+extension String {
+	public static func space() -> String {
+		return " "
+	}
+}
+
+extension Character {
+	public static func space() -> Character {
+		return " "
+	}
 }

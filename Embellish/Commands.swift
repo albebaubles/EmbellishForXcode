@@ -36,30 +36,40 @@ class ReplaceSelectionCommand: NSObject, XCSourceEditorCommand {
 
 /// prepend text in pasteboard to the selected lines
 class PrependCommand: NSObject, XCSourceEditorCommand {
-	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperation(stringData: (NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!)!,
-			invocation: invocation, completionHandler: completionHandler, operation: .Prepend)
+	func perform(with invocation: XCSourceEditorCommandInvocation,
+		completionHandler: @escaping (Error?) -> Void) -> Void {
+		performEmbellishOperation(stringData:
+				(NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!)!,
+			invocation: invocation,
+			completionHandler: completionHandler, operation: .Prepend)
 	}
 }
 
 /// run **Embellish.scpt** to capture input text and prepend to the selected lines
 class PrependSelectionCommand: NSObject, XCSourceEditorCommand {
-	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperationScripted(invocation: invocation, completionHandler: completionHandler, operation: .Prepend)
+	func perform(with invocation: XCSourceEditorCommandInvocation,
+		completionHandler: @escaping (Error?) -> Void) -> Void {
+		performEmbellishOperationScripted(invocation: invocation,
+			completionHandler: completionHandler, operation: .Prepend)
 	}
 }
 
 /// sort the selected lines ascending collation
 class SortCommandAscending: NSObject, XCSourceEditorCommand {
-	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperation(stringData: (NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!),
-			invocation: invocation, completionHandler: completionHandler, operation: .SortAscending)
+	func perform(with invocation: XCSourceEditorCommandInvocation,
+		completionHandler: @escaping (Error?) -> Void) -> Void {
+		performEmbellishOperation(stringData:
+				(NSPasteboard.general.pasteboardItems?.last?.string(forType: .string)!),
+			invocation: invocation,
+			completionHandler: completionHandler, operation: .SortAscending)
 	}
 }
 
 /// sort the selected lines descending collation
 class SortCommandDescending: NSObject, XCSourceEditorCommand {
-	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) -> Void {
-		performEmbellishOperation(invocation: invocation, completionHandler: completionHandler, operation: .SortDescending)
+	func perform(with invocation: XCSourceEditorCommandInvocation,
+		completionHandler: @escaping (Error?) -> Void) -> Void {
+		performEmbellishOperation(invocation: invocation,
+			completionHandler: completionHandler, operation: .SortDescending)
 	}
 }

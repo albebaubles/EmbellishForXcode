@@ -142,14 +142,14 @@ extension XCSourceEditorCommand {
 }
 
 enum EmbellishOperation {
-	/// It appends text to the selected lines
+	/// appends text to the selected lines
 	case Append
-	/// It preprends text to the selected lines
+	/// preprends text to the selected lines
 	case Prepend
-	/// It sorts the selected lines Ascending
+	/// sorts the selected lines Ascending
 	case Replace
 	case SortAscending
-/// It sorts the selected lines Descending
+	/// sorts the selected lines Descending
 	case SortDescending
 }
 

@@ -114,7 +114,8 @@ extension String {
                 let operEnd = index(operIndex, offsetBy: compare.count)
                 let obj2Index = nextNonSpaceIndex(operEnd)
                 if let obj2 = findObject(from: obj2Index) {
-                    return (string: obj1.string + " " + compare + " " + obj2.string, index: obj2.index)
+									return (string: obj1.string + String.space() + compare + String.space()
+														+ obj2.string, index: obj2.index)
                 } else {
                     return obj1
                 }
