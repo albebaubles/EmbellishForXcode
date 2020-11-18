@@ -13,8 +13,8 @@ class ViewController: NSViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		scriptText.setSelectedRange(
-			.init(location: 0, length: scriptText.string.count))
+		self.scriptText.setSelectedRange(
+			.init(location: 0, length: self.scriptText.string.count))
 	}
 
 
