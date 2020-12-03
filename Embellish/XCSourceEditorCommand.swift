@@ -19,16 +19,16 @@ extension XCSourceEditorCommand {
 		)
 	}
 
-	func fileScriptPath(fileName: String) -> URL? {
+	func fileScriptPath(filename: String) -> URL? {
 		return scriptPath?
-			.appendingPathComponent(fileName)
+			.appendingPathComponent(filename)
 			.appendingPathExtension("scpt")
 	}
 
 	func script() -> NSUserAppleScriptTask? {
 
 		NSLog("🚩 before load script")
-		guard let script = try? NSUserAppleScriptTask(url: fileScriptPath(fileName: "Embellish")!) else {
+		guard let script = try? NSUserAppleScriptTask(url: fileScriptPath(filename: "Embellish")!) else {
 			// since this is an add-in, do not raise an error
 			NSLog("🚩 unable to load script")
 			return nil

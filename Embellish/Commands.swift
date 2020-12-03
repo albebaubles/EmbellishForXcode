@@ -54,7 +54,7 @@ class PrependSelectionCommand: NSObject, XCSourceEditorCommand {
 	}
 }
 
-/// sort the selected lines ascending collation
+/// sort the selected lines ascending
 class SortCommandAscending: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation,
 		completionHandler: @escaping (Error?) -> Void) -> Void {
@@ -65,7 +65,7 @@ class SortCommandAscending: NSObject, XCSourceEditorCommand {
 	}
 }
 
-/// sort the selected lines descending collation
+/// sort the selected lines descending
 class SortCommandDescending: NSObject, XCSourceEditorCommand {
 	func perform(with invocation: XCSourceEditorCommandInvocation,
 		completionHandler: @escaping (Error?) -> Void) -> Void {

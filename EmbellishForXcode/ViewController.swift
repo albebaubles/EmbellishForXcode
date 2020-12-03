@@ -40,5 +40,6 @@ class ViewController: NSViewController {
 	@IBAction func showPreferences(_ sender: Any) {
 		NSWorkspace.shared.open(URL(fileURLWithPath: "/System/Library/PreferencePanes/Extensions.prefPane"))
 	}
+
 }
 

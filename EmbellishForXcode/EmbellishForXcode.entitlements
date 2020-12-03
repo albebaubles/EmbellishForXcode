@@ -4,10 +4,5 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
-	<key>com.apple.security.files.user-selected.read-only</key>
-	<array>
-		<string>${HOME}/Library/Application Scripts/EmbellishForXcode</string>
-		<string>${HOME}/Library/Application Scripts/EmbellishForXcode/Embellish.scpt</string>
-	</array>
 </dict>
 </plist>

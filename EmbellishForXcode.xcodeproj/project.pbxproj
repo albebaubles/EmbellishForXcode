@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		B4241D8124ED799D00F0973C /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B420249B247F0CED0074E215 /* XcodeKit.framework */; };
 		B425E031242A5FD900E0F5B1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E030242A5FD900E0F5B1 /* Commands.swift */; };
-		B4274E2D2520F13E002522AF /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4650625247462E600C878C9 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4650624247462E600C878C9 /* SourceEditorExtension.swift */; };
 		B4858EAF24DC622100F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
 		B4858EB024DC622C00F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
 		B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBA1B8246CACB200DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBDEBA2462061E000FCB90 /* XCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953965E46242521E59A23966 /* XCSourceEditorCommand.swift */; };
-		B4E2103F242D676900732D7E /* Embellish.scpt in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511E242AAD2500C92183 /* Embellish.scpt */; };
 		B4EA9F972476E6E500551DE8 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = B4EA9F962476E6E500551DE8 /* install.sh */; };
 		B4F2511B242AA2B300C92183 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511A242AA2B300C92183 /* README.md */; };
 		B4F99D6F2410291800307B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D6E2410291800307B5F /* AppDelegate.swift */; };
@@ -293,7 +291,6 @@
 				B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */,
 				B4F99D732410291900307B5F /* Assets.xcassets in Resources */,
 				B4F99D762410291900307B5F /* Main.storyboard in Resources */,
-				B4E2103F242D676900732D7E /* Embellish.scpt in Resources */,
 				B4EA9F972476E6E500551DE8 /* install.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4BBA1B8246CACB200DB241B /* iTunesArtwork.png in Resources */,
-				B4274E2D2520F13E002522AF /* Embellish.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +481,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EmbellishForXcode/Info.plist;
@@ -509,7 +505,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EmbellishForXcode/Info.plist;
@@ -532,7 +528,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Embellish/proj/Info.plist;
@@ -557,7 +553,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Embellish/proj/Info.plist;
