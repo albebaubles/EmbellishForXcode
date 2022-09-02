@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4241D8124ED799D00F0973C /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B420249B247F0CED0074E215 /* XcodeKit.framework */; };
 		B425E031242A5FD900E0F5B1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425E030242A5FD900E0F5B1 /* Commands.swift */; };
 		B4650625247462E600C878C9 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4650624247462E600C878C9 /* SourceEditorExtension.swift */; };
 		B4858EAF24DC622100F9ED02 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4858EAE24DC622100F9ED02 /* AppKit.framework */; };
@@ -15,6 +14,8 @@
 		B4BBA1B7246CAC3600DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBA1B8246CACB200DB241B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B4BBA1B6246CAC3600DB241B /* iTunesArtwork.png */; };
 		B4BBDEBA2462061E000FCB90 /* XCSourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953965E46242521E59A23966 /* XCSourceEditorCommand.swift */; };
+		B4D6E7B228C12DBA008CEE5E /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B420249B247F0CED0074E215 /* XcodeKit.framework */; };
+		B4D6E7B328C12DBA008CEE5E /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B420249B247F0CED0074E215 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4EA9F972476E6E500551DE8 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = B4EA9F962476E6E500551DE8 /* install.sh */; };
 		B4F2511B242AA2B300C92183 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F2511A242AA2B300C92183 /* README.md */; };
 		B4F99D6F2410291800307B5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F99D6E2410291800307B5F /* AppDelegate.swift */; };
@@ -46,6 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B4D6E7B428C12DBA008CEE5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4D6E7B328C12DBA008CEE5E /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4F99D932410292700307B5F /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4241D8124ED799D00F0973C /* XcodeKit.framework in Frameworks */,
+				B4D6E7B228C12DBA008CEE5E /* XcodeKit.framework in Frameworks */,
 				B4F99D852410292600307B5F /* Cocoa.framework in Frameworks */,
 				B4858EB024DC622C00F9ED02 /* AppKit.framework in Frameworks */,
 			);
@@ -235,6 +247,7 @@
 				B4F99D7E2410292600307B5F /* Sources */,
 				B4F99D7F2410292600307B5F /* Frameworks */,
 				B4F99D802410292600307B5F /* Resources */,
+				B4D6E7B428C12DBA008CEE5E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -485,10 +498,12 @@
 				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EmbellishForXcode/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.EmbellishForXcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -509,10 +524,12 @@
 				DEVELOPMENT_TEAM = 6D83G6D489;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = EmbellishForXcode/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.EmbellishForXcode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -537,7 +554,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.EmbellishForXcode.Embellish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -562,7 +579,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.albebaubles.EmbellishForXcode.Embellish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

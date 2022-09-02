@@ -51,10 +51,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			09qGnvUhOOr5+KuxT6EkPJnJ1No=
+			0ArdgxZ0jOdHNoWYGoOjDan271M=
 			</data>
 			<key>requirement</key>
-			<string>identifier "com.albebaubles.EmbellishForXcode.Embellish" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: dewayne Corbett (38XK574NNJ)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+			<string>identifier "com.albebaubles.EmbellishForXcode.Embellish" and anchor apple generic and certificate leaf[subject.CN] = "Apple Distribution: dewayne Corbett (6D83G6D489)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<dict>
